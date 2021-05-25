@@ -1,0 +1,44 @@
+1. How to pull the image
+2. How to run the container
+3. How to stop/delete the container
+
+
+
+
+Deploy the MS in docker
+------------------------------
+
+1. How to dockerized the Spring boot Rest Application [employee-producer]
+- Dockerfile -> Create the docker file
+  
+  From openjdk:8
+  copy /target/employee-producer-0.0.1-SNAPSHOT.jar employee-producer-0.0.1-SNAPSHOT.jar
+  CMD ["java","-jar","employee-producer-0.0.1-SNAPSHOT.jar"] 
+
+- Build the jar File
+
+- Build The image from Dockerfile
+
+- $ docker build -f Dockerfile -t image-tag .
+
+- Create the container from the image and Run The container
+
+- $docker run --name container_name -p 8080:8080 -d image-tag
+
+- check in docker ps command
+
+- docker logs produce - display the logs
+
+- Test it.
+
+- http://192.168.99.100:8080/employee
+
+------------------------------------------------------
+
+Docker Compose
+---------------------
+
+
+
+
+
